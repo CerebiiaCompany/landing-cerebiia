@@ -54,7 +54,7 @@ function Chip({
   active: boolean;
   onClick: () => void;
   title: string;
-  description?: string;
+  description?: string | undefined;
 }) {
   return (
     <button
