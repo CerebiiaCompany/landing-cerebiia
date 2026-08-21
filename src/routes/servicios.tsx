@@ -105,7 +105,7 @@ function ServiciosPage() {
           </div>
           <Link
             to="/cotizar"
-            className="brand-gradient-bg inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground"
+            className="btn-solid inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground"
           >
             Ir al cotizador <ArrowRight className="size-4" aria-hidden />
           </Link>

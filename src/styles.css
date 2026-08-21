@@ -140,7 +140,7 @@
   color: transparent;
 }
 
-@utility brand-gradient-bg {
+@utility btn-solid {
   background-image: linear-gradient(
     100deg,
     var(--brand-cyan),

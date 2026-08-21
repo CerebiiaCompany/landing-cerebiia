@@ -39,7 +39,7 @@ export function SiteHeader() {
         <div className="hidden md:block">
           <Link
             to="/cotizar"
-            className="brand-gradient-bg inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
+            className="btn-solid inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
           >
             Cotizar mi proyecto
           </Link>

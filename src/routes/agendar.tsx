@@ -211,7 +211,7 @@ function AgendarPage() {
               <button
                 type="submit"
                 disabled={sending}
-                className="brand-gradient-bg inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold text-primary-foreground disabled:opacity-60"
+                className="btn-solid inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold text-primary-foreground disabled:opacity-60"
               >
                 {sending ? (
                   <Loader2 className="size-4 animate-spin" aria-hidden />
