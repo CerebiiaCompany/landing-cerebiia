@@ -16,9 +16,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4">
-        <Link to="/" className="flex items-center gap-2" aria-label="Cerebiia inicio">
-          <img src={logo.url} alt="Cerebiia S.A.S" className="h-8 w-auto" />
+        <Link to="/" className="flex items-center gap-2.5" aria-label="Cerebiia inicio">
+          <img src={mark.url} alt="Cerebiia S.A.S" className="h-8 w-auto" />
+          <span className="text-lg font-extrabold tracking-[0.14em] text-foreground">CEREBIIA</span>
         </Link>
+
 
         <nav className="hidden items-center gap-1 md:flex">
           {NAV.map((item) => (
