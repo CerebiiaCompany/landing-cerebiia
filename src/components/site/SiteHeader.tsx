@@ -2,6 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import mark from "@/assets/cerebiia-mark.png.asset.json";
+import { ThemeToggle } from "@/components/site/ThemeToggle";
+
 
 const NAV = [
   { to: "/", label: "Inicio" },
@@ -36,24 +38,26 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
           <Link
             to="/cotizar"
-            className="btn-solid inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
+            className="btn-solid hidden items-center rounded-full px-5 py-2.5 text-sm font-semibold md:inline-flex"
           >
             Cotizar mi proyecto
           </Link>
+
+          <button
+            type="button"
+            onClick={() => setOpen((value) => !value)}
+            aria-label="Abrir menú"
+            aria-expanded={open}
+            className="rounded-full border border-border p-2 md:hidden"
+          >
+            <Menu className="size-5" aria-hidden />
+          </button>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setOpen((value) => !value)}
-          aria-label="Abrir menú"
-          aria-expanded={open}
-          className="rounded-full border border-border p-2 md:hidden"
-        >
-          <Menu className="size-5" aria-hidden />
-        </button>
       </div>
 
       {open ? (
