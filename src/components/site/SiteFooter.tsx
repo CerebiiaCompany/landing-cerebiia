@@ -1,13 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/cerebiia-logo-horizontal.png.asset.json";
+import mark from "@/assets/cerebiia-mark.png.asset.json";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border/60 bg-surface/30">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <img src={logo.url} alt="Cerebiia S.A.S" className="h-9 w-auto" />
+          <div className="flex items-center gap-2.5">
+            <img src={mark.url} alt="Cerebiia S.A.S" className="h-9 w-auto" />
+            <span className="text-lg font-extrabold tracking-[0.14em] text-foreground">
+              CEREBIIA
+            </span>
+          </div>
+
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
             Cerebiia S.A.S diseña y construye software a la medida para empresas colombianas:
             plataformas internas, integraciones y automatización con inteligencia artificial.
