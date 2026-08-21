@@ -175,7 +175,7 @@ function CotizarPage() {
               <button
                 type="button"
                 onClick={downloadBrief}
-                className="brand-gradient-bg inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground"
+                className="btn-solid inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground"
               >
                 <Download className="size-4" aria-hidden /> Descargar mi guía
               </button>
@@ -382,7 +382,7 @@ function CotizarPage() {
                   <button
                     type="button"
                     onClick={() => setStep((value) => Math.min(STEPS.length - 1, value + 1))}
-                    className="brand-gradient-bg inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-primary-foreground"
+                    className="btn-solid inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-primary-foreground"
                   >
                     Siguiente <ArrowRight className="size-4" aria-hidden />
                   </button>
@@ -391,7 +391,7 @@ function CotizarPage() {
                     type="button"
                     onClick={handleSubmit}
                     disabled={sending}
-                    className="brand-gradient-bg inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-60"
+                    className="btn-solid inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-60"
                   >
                     {sending ? <Loader2 className="size-4 animate-spin" aria-hidden /> : null}
                     Enviar solicitud

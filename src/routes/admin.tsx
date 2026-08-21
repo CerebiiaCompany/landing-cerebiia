@@ -100,7 +100,7 @@ function AdminPage() {
             </p>
             <Link
               to="/auth"
-              className="brand-gradient-bg mt-6 inline-flex rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground"
+              className="btn-solid mt-6 inline-flex rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground"
             >
               Ir al acceso interno
             </Link>

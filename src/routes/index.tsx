@@ -119,7 +119,7 @@ function Index() {
             <div className="mt-9">
               <Link
                 to="/cotizar"
-                className="brand-gradient-bg group inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
+                className="btn-solid group inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
               >
                 Cotizar mi proyecto en 2 minutos
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" aria-hidden />
@@ -186,7 +186,7 @@ function Index() {
               </div>
               <Link
                 to="/cotizar"
-                className="brand-gradient-bg mt-8 inline-flex w-fit items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground"
+                className="btn-solid mt-8 inline-flex w-fit items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground"
               >
                 Empezar mi cotización <ArrowRight className="size-4" aria-hidden />
               </Link>
@@ -242,7 +242,7 @@ function Index() {
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
                     to="/cotizar"
-                    className="brand-gradient-bg inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground"
+                    className="btn-solid inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground"
                   >
                     Cotizar ahora
                   </Link>
