@@ -49,7 +49,7 @@ const SERVICES = [
     icon: Code2,
     title: "Software a la medida",
     text: "Plataformas internas que se ajustan a su operación real, no al revés.",
-    span: "md:col-span-2 md:row-span-2",
+    span: "md:col-span-2",
   },
   {
     icon: Plug,
