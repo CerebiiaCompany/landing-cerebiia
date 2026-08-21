@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AgendarRouteImport } from './routes/agendar'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as CotizarRouteImport } from './routes/cotizar'
@@ -18,6 +19,11 @@ import { Route as ServiciosRouteImport } from './routes/servicios'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AgendarRoute = AgendarRouteImport.update({
@@ -43,6 +49,7 @@ const ServiciosRoute = ServiciosRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/agendar': typeof AgendarRoute
   '/auth': typeof AuthRoute
   '/cotizar': typeof CotizarRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/agendar': typeof AgendarRoute
   '/auth': typeof AuthRoute
   '/cotizar': typeof CotizarRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/agendar': typeof AgendarRoute
   '/auth': typeof AuthRoute
   '/cotizar': typeof CotizarRoute
@@ -65,14 +74,22 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/agendar' | '/auth' | '/cotizar' | '/servicios'
+  fullPaths: '/' | '/admin' | '/agendar' | '/auth' | '/cotizar' | '/servicios'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/agendar' | '/auth' | '/cotizar' | '/servicios'
-  id: '__root__' | '/' | '/agendar' | '/auth' | '/cotizar' | '/servicios'
+  to: '/' | '/admin' | '/agendar' | '/auth' | '/cotizar' | '/servicios'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/agendar'
+    | '/auth'
+    | '/cotizar'
+    | '/servicios'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRoute
   AgendarRoute: typeof AgendarRoute
   AuthRoute: typeof AuthRoute
   CotizarRoute: typeof CotizarRoute
@@ -86,6 +103,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/agendar': {
@@ -121,6 +145,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRoute,
   AgendarRoute: AgendarRoute,
   AuthRoute: AuthRoute,
   CotizarRoute: CotizarRoute,
