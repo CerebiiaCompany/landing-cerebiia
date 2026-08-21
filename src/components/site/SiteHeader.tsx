@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/cerebiia-logo-horizontal.png.asset.json";
+import mark from "@/assets/cerebiia-mark.png.asset.json";
 
 const NAV = [
   { to: "/", label: "Inicio" },
