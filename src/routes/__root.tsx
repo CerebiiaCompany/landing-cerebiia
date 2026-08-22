@@ -118,7 +118,7 @@ const themeScript = `(function(){try{var t=localStorage.getItem('cerebiia-theme'
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="es-CO" className="dark" style={{ colorScheme: "dark" }}>
+    <html lang="es-CO" suppressHydrationWarning>
       <head>
         <HeadContent />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
