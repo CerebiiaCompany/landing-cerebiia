@@ -1,18 +1,8 @@
-# Cerebiia: Your Custom Software Solution
+Cerebiia S.A.S. presenta su nueva arquitectura digital, diseñada para redefinir el estándar en el desarrollo de software a la medida en Colombia. Esta plataforma trasciende la simple presencia informativa para convertirse en un ecosistema vanguardista, estructurado bajo rigurosos principios de colorimetría que proyectan la solidez y sofisticación de nuestra firma.
 
-vamos  a crear una landing page para una empresa software  a la medida..
-La empresa se llama Cerebiia S.A.S, es de colombia, y aunque tienen ya una página, a los dueños no les agradó..
-Necesito que sea innovadora, tengas en cuenta la colorimetria y el circulo cromático, requiero que no solo sea informativa, sino a su vez se puedan contactar para agendar citas a posibles clientes, es más, quisiera un espacio interactivo el cual el mismo cliente pudiera enviar el posible caso de su situación y que se le haga una cotización aproximada, o que venga con algun espacio el cual facilite el trabajo al poder hacer o dejar una guía de lo que quiere..
-La idea es ahorrar tiempos, dado el caso que sea un proyecto bastante grande, que el mensaje salga directo al jefe de desarrollo..
+El núcleo de esta evolución es la optimización comercial y operativa. Hemos integrado un sistema fluido de agendamiento y un módulo interactivo de pre-diagnóstico inteligente, permitiendo a los clientes estructurar sus requerimientos y obtener estimaciones preliminares de forma autónoma. Además, para garantizar la máxima eficiencia institucional, la plataforma cuenta con enrutamiento algorítmico: las solicitudes identificadas como proyectos de gran escala son canalizadas automáticamente a nuestra Jefatura de Desarrollo, asegurando tiempos de respuesta óptimos y atención técnica prioritaria desde el primer contacto.
 
-Esta es la página oficial https://cerebiia.com/ 
-tambien te envié el logo de la empresa, para que te guies.
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/a1f5ef59-a221-4173-973a-013ca165982d).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
 - **Stay in sync**: every change made in Lovable is committed straight to this repository.
