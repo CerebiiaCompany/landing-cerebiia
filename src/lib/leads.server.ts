@@ -30,12 +30,14 @@ export function createPublicServerClient(): SupabaseClient<Database> {
 
 /** Verifica que el usuario autenticado pueda ver el panel interno. */
 export async function assertStaff(supabase: SupabaseClient<Database>, userId: string) {
-  const [admin, staff] = await Promise.all([
-    supabase.rpc("has_role", { _user_id: userId, _role: "admin" }),
-    supabase.rpc("has_role", { _user_id: userId, _role: "staff" }),
-  ]);
+  const { data } = await supabase
+    .from("user_roles")
+    .select("role")
+    .eq("user_id", userId)
+    .in("role", ["admin", "staff"])
+    .limit(1);
 
-  if (admin.data !== true && staff.data !== true) {
+  if (!data || data.length === 0) {
     throw new Error("No tiene permisos para ver el panel interno.");
   }
 }
