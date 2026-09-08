@@ -39,7 +39,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle />
+          
           <Link
             to="/cotizar"
             className="btn-solid hidden items-center rounded-full px-5 py-2.5 text-sm font-semibold md:inline-flex"
