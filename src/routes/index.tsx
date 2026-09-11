@@ -255,7 +255,7 @@ function Index() {
                 </div>
               </div>
               <img
-                src={logoStacked.url}
+                src="/logo.png"
                 alt="Marca de Cerebiia S.A.S"
                 className="mx-auto hidden w-48 md:block"
                 loading="lazy"
