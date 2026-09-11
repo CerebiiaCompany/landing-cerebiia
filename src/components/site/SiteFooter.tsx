@@ -57,7 +57,7 @@ export function SiteFooter() {
             </li>
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 size-4 text-brand-cyan" aria-hidden />
-              <a href="https://wa.me/573000000000" className="hover:text-foreground">
+              <a href="https://wa.me/@Juan3s" className="hover:text-foreground">
                 WhatsApp comercial
               </a>
             </li>

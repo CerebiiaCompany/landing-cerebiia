@@ -1,3 +1,4 @@
+import { ProjectsSection } from "@/components/site/ProjectsSection";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -246,6 +247,9 @@ function Index() {
           </motion.div>
         </section>
 
+        {/* Proyectos y Aliados */}
+        <ProjectsSection />
+        
         {/* Proceso */}
         <section className="mx-auto max-w-7xl px-5 pb-16 md:pb-24">
           <motion.div
