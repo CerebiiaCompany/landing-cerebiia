@@ -27,31 +27,37 @@ const PROJECTS = [
     title: "Diseño y Desarrollo Web de EnConcreto",
     description: "EnConcreto Bienes & Servicios es una empresa Norte Santandereana dedicada a la fabricación de productos prefabricados en concreto.",
     color: "bg-brand-cyan/10",
+    image: "/Web_EnConcreto.png",
   },
   {
     title: "Videojuego Educativo - Norte de Aventuras",
     description: "Aventúrate con Kra, y conocerás de la historia, cultura, flora y fauna de Norte de Santander.",
     color: "bg-brand-magenta/10",
+    image: "/Videojuego_Norte de Aventuras.png",
   },
   {
     title: "Plataforma Web y Videojuego de Cuidamundos",
     description: "Experiencia gamificada de aventura y aprendizaje sobre los CuidaMundos de CENS. ¡Conviértete en Purita, Jirol o Félix y asume el reto!",
     color: "bg-brand-blue/10",
+    image: "/Cuidamundos.png",
   },
   {
     title: "Landing Page para Directores de Happy BPO",
     description: "En Happify combinan automatización inteligente con agentes motivados para brindar una atención al cliente humana, ágil y medible.",
     color: "bg-brand-cyan/10",
+    image: "/Landing Happy BPO.png",
   },
   {
     title: "Diseño y Desarrollo Web de ASCONFIT",
     description: "ASCONFIT es la primera firma certificada en Cúcuta, ante la Junta Central de Contadores. Con más de 30 años de experiencia y promotora de la Ley ZESE.",
     color: "bg-brand-magenta/10",
+    image: "/Web de ASCONFIT.png",
   },
   {
     title: "Desarrollo de la Tienda Virtual de ZERO BIKES",
     description: "Empresa dedicada a fomentar el deporte, la salud y el transporte, amigable con el medio ambiente.",
     color: "bg-brand-blue/10",
+    image: "/Tienda Virtual de ZERO BIKES.png",
   },
 ];
 
@@ -152,10 +158,13 @@ export function ProjectsSection() {
               <motion.div variants={staggerContainer} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {PROJECTS.map((project, idx) => (
                   <motion.article variants={fadeUp} key={idx} className="bento flex flex-col overflow-hidden bg-card">
-                    <div className={`aspect-[16/10] w-full ${project.color} flex items-center justify-center p-4 border-b border-border/50`}>
-                      <span className="text-xs font-medium text-foreground/40 text-center">
-                        Espacio para imagen<br />{project.title}
-                      </span>
+                    <div className={`aspect-[16/10] w-full ${project.color} overflow-hidden border-b border-border/50`}>
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" 
+                        loading="lazy"
+                      />
                     </div>
                     <div className="flex flex-1 flex-col p-6">
                       <h3 className="text-xl font-bold leading-tight text-foreground">{project.title}</h3>

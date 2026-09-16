@@ -109,7 +109,7 @@ const staggerContainer: Variants = {
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-background ">
       <SiteHeader />
 
       <main>
