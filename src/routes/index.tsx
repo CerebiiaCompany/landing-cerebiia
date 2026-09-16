@@ -13,7 +13,7 @@ import {
   Smartphone,
   Sparkles,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 
@@ -92,12 +92,12 @@ const PROCESS = [
 ];
 
 // --- Animaciones ---
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -246,7 +246,7 @@ function Index() {
             </motion.article>
           </motion.div>
         </section>
-
+        
         {/* Proyectos y Aliados */}
         <ProjectsSection />
         
