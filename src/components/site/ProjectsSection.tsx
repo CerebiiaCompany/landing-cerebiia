@@ -13,10 +13,14 @@ const staggerContainer: Variants = {
     transition: { staggerChildren: 0.1 },
   },
 };
-const PARTNERS_PLACEHOLDERS = Array.from({ length: 6 }).map((_, i) => ({
-  id: i,
-  name: `Aliado ${i + 1}`,
-}));
+const PARTNERS = [
+  { id: 1, name: "EnConcreto", image: "/enconcreto.png" },
+  { id: 2, name: "Aventuras", image: "/norte-aventuras.png" },
+  { id: 3, name: "CENS", image: "/cens.png" },
+  { id: 4, name: "Happy BPO", image: "/happy-bpo.png" },
+  { id: 5, name: "ASCONFIT", image: "/asconfit.png" },
+  { id: 6, name: "ZERO BIKES", image: "/zero-bikes.png" },
+];
 
 const PROJECTS = [
   {
@@ -86,7 +90,7 @@ export function ProjectsSection() {
           </motion.div>
         </motion.div>
 
-        {/* Derecha: Cuadrícula de 6 Logos */}
+       {/* Derecha: Cuadrícula de 6 Logos */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -94,15 +98,19 @@ export function ProjectsSection() {
           variants={staggerContainer}
           className="grid grid-cols-3 gap-3 md:gap-4"
         >
-          {PARTNERS_PLACEHOLDERS.map((partner) => (
+          {PARTNERS.map((partner) => (
             <motion.div
               variants={fadeUp}
               key={partner.id}
               className="aspect-square flex flex-col items-center justify-center rounded-2xl bg-brand-blue/5 dark:bg-brand-blue/10 p-4 transition-transform hover:scale-105 border border-border/50"
             >
-              {/* Aquí irá el <img> del logo */}
-              <div className="size-10 rounded-full bg-brand-blue/20 dark:bg-brand-blue/40 mb-2" />
-              <span className="text-xs font-semibold text-brand-blue dark:text-white/80 text-center leading-tight">
+              <img 
+                src={partner.image} 
+                alt={`Logo de ${partner.name}`} 
+                className="w-14 h-14 object-contain mb-2" 
+                loading="lazy"
+              />
+              <span className="text-[11px] font-semibold text-brand-blue dark:text-white/80 text-center leading-tight">
                 {partner.name}
               </span>
             </motion.div>
