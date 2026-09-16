@@ -102,12 +102,14 @@ export function ProjectsSection() {
             <motion.div
               variants={fadeUp}
               key={partner.id}
-              className="aspect-square flex flex-col items-center justify-center rounded-2xl bg-brand-blue/5 dark:bg-brand-blue/10 p-4 transition-transform hover:scale-105 border border-border/50"
+              // Cambiamos p-4 a p-2 para dar más espacio interno
+              className="aspect-square flex flex-col items-center justify-center rounded-2xl bg-brand-blue/5 dark:bg-brand-blue/10 p-2 md:p-3 transition-transform hover:scale-105 border border-border/50"
             >
               <img 
                 src={partner.image} 
                 alt={`Logo de ${partner.name}`} 
-                className="w-14 h-14 object-contain mb-2" 
+                // Aumentamos el tamaño al máximo ancho y alto proporcional
+                className="w-[85%] h-[75%] object-contain mb-1" 
                 loading="lazy"
               />
               <span className="text-[11px] font-semibold text-brand-blue dark:text-white/80 text-center leading-tight">
